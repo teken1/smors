@@ -17,22 +17,37 @@ export const LoginPage = () => {
     let tvScriptLoadingPromise;
     const onLoadScriptRef = useRef();
 
+    const handleLogin = async () => {
+
+    }
+
 useEffect(() => {
     
 },[])
     return (
-        <main style={{backgroundColor:"#303461",
+        <main style={{backgroundColor:"#1c1f42",
         }}>
-            <div style={{minHeight:"100vh", }}>
-                <div style={{backgroundImage:"url(/images/logolight.png)",backgroundRepeat:"no-repeat",backgroundSize:"100%",backgroundPosition:"center",position:"absolute",top:"40px",left:0,width:"100%",minHeight:"100vh",opacity:".05"}}>
+            <div style={{minHeight:"100vh", padding:"20px 50px" }}>
+                <div className="logo-bg">
                 </div>
-                <div style={{paddingTop:"25%",textAlign:"center"}}>
+                <div style={{textAlign:"left"}}>
                     <img src="/images/logolight.png"/>
-                    <div style={{position:"absolute",top:"40px",right:"50px"}}>
-                        <button onClick={() => window.location='/login'} class="white" style={{fontSize:"16px",verticalAlign:"bottom",cursor:"pointer", backgroundColor:"transparent",border:"none"}}>Proceed to login 
-                            <span style={{marginLeft:"5px",verticalAlign:"bottom"}} class="material-icons white">login</span>
-                        </button>
+                </div>
+                <div className="white-ellipse">
+                </div>
+                <div className="yellow-ellipse">
+                </div>
+                <div className="loginform">
+                    <h3>Login to Account</h3>
+                    <p>Enter your Username & Password</p>
+                    <div className="form-control">
+                        <input type="text" placeholder="Enter Username" />
                     </div>
+                    <div className="form-control">
+                        <input type="password" placeholder="Enter Password" />
+                    </div>
+                    <p onClick={()=>window.location="/forgot-password"} className="forgotpass">I forgot my password</p>
+                    <button className="gradient-btn" onClick={handleLogin}>Login Here</button>
                 </div>
             </div>
         </main>
