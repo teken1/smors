@@ -28,9 +28,9 @@ useEffect(() => {
                 </div>
                 <div style={{paddingTop:"25%",textAlign:"center"}}>
                     <img src="/images/logolight.png"/>
-                    <div style={{position:"absolute",top:"10px",right:"35px"}}>
+                    <div style={{position:"absolute",top:"40px",right:"50px"}}>
                         <button onClick={() => window.location='/login'} class="white" style={{fontSize:"16px",verticalAlign:"bottom",cursor:"pointer", backgroundColor:"transparent",border:"none"}}>Proceed to login 
-                            <span style={{marginLeft:"10px",verticalAlign:"bottom"}} class="material-icons white">login</span>
+                            <span style={{marginLeft:"5px",verticalAlign:"bottom"}} class="material-icons white">login</span>
                         </button>
                     </div>
                 </div>
