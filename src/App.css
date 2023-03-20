@@ -84,6 +84,10 @@ body {
   color:#fff;
 }
 
+.grey {
+  color:grey;
+}
+
 .dark {
   color:#1c1f42;
 }
@@ -150,4 +154,11 @@ body {
   width:100%;
   padding:15px 10px;
   margin-top:10px;
+}
+
+.loginform .seepass span{
+  position: absolute;
+  bottom:95px;
+  right:0px;
+  cursor:pointer;
 }
