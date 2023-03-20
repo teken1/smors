@@ -4,7 +4,7 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
-import {Landing,Dashboard, Transaction, Profile, Logout, Support, CopyTrading, PaymentAccount, Deposit, Withdraw} from "./pages"
+import {Landing, LoginPage, Dashboard, Transaction, Profile, Logout, Support, CopyTrading, PaymentAccount, Deposit, Withdraw} from "./pages"
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -12,6 +12,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Landing />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
     </BrowserRouter>
   );

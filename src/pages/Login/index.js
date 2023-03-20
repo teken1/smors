@@ -1,7 +1,22 @@
 import { Login } from "@mui/icons-material";
 import React, { useMemo, useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-export const Landing = () => {
+export const LoginPage = () => {
+  const [active,setActive] = useState("1");
+    const [navChecked, setNavChecked] = useState(false);
+    const [fname, setFname] = useState("Daniel");
+    const [capitalUSD, setCapitalUSD] = useState("0.00");
+    const [capitalBTC, setCapitalBTC] = useState("0.00000000");
+    const [profitUSD, setProfitUSD] = useState("0.00");
+    const [profitBTC, setProfitBTC] = useState("0.00000000");
+    const [bonusUSD, setBonusUSD] = useState("0.00");
+    const [bonusBTC, setBonusBTC] = useState("0.00000000");
+
+    const navigate = useNavigate();
+    
+    let tvScriptLoadingPromise;
+    const onLoadScriptRef = useRef();
+
 useEffect(() => {
     
 },[])
