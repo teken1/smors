@@ -1,5 +1,5 @@
 * {
-  font-family:Roboto;
+  font-family:'Open Sans';
 }
 
 body {
@@ -146,6 +146,7 @@ body {
 }
 
 .loginform button {
+  cursor:pointer;
   border:none;
   background-image: linear-gradient(#ffee02, #9b9001 );
   color:#fff;

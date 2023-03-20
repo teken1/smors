@@ -6,7 +6,7 @@ import MuiAlert from '@mui/material/Alert';
 const Alert = React.forwardRef(function Alert(props, ref) {
     return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
   });
-export const LoginPage = () => {
+export const Welcome = () => {
   const [passVisible,setPassVisibile] = useState("visibility");
   const [passType,setPassType] = useState("password");
     const [navChecked, setNavChecked] = useState(false);
@@ -71,7 +71,7 @@ useEffect(() => {
     
 },[])
     return (
-        <main style={{backgroundColor:"#1c1f42",
+        <main style={{backgroundColor:"#fff",
         }}>
             <div style={{minHeight:"100vh", padding:"20px 50px", position:"relative", overflowX:"hidden" }}>
                 <div className="logo-bg">
