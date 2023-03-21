@@ -212,6 +212,8 @@ body {
   font-weight:300;
   line-height: 21px;
   font-family:Poppins;
+  margin:0px;
+  margin-bottom:5px;
 }
 
 .light-header p {
@@ -221,4 +223,74 @@ body {
   line-height: 24px;
   font-family:Poppins;
   margin:0px;
+}
+
+.bottomnav {
+  text-align:center;
+  cursor:pointer;
+}
+
+.bottomnav p {
+  margin:10px;
+}
+
+.major-contents {
+  margin-bottom:150px;
+}
+
+.major-contents .title {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height */
+  margin-top:21px;
+  letter-spacing: 0.02em;
+  margin-bottom:20px;
+  color: #100C57;
+}
+
+.each-content {
+  padding:21px;
+  margin-bottom:5px;
+  background: #FFFFFF;
+  box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.each-content h6 {
+  margin:0px;
+  font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+
+
+/* Secondary/Grey/600 */
+
+color: #A3AED0;
+}
+
+.each-content h3 {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  /* identical to box height, or 133% */
+  
+  display: flex;
+  align-items: center;
+  text-align: right;
+  letter-spacing: -0.02em;
+  
+  /* Secondary/Dark Grey/900 */
+  margin:0px;
+  color: #1B2559;
 }

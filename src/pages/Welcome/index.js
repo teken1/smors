@@ -1,5 +1,5 @@
 import { Login } from "@mui/icons-material";
-import { Snackbar } from "@mui/material";
+import { BottomNavigation, BottomNavigationAction, Box, Grid, Snackbar } from "@mui/material";
 import React, { useMemo, useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import MuiAlert from '@mui/material/Alert';
@@ -9,7 +9,7 @@ const Alert = React.forwardRef(function Alert(props, ref) {
 export const Welcome = () => {
   const [passVisible,setPassVisibile] = useState("visibility");
   const [passType,setPassType] = useState("password");
-    const [navChecked, setNavChecked] = useState(false);
+    const [navValue, setNavValue] = useState("");
     const [openAlert, setOpenAlert] = useState(false);
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -77,7 +77,7 @@ useEffect(() => {
     return (
         <main style={{backgroundColor:"#fff",
         }}>
-            <div style={{minHeight:"100vh", padding:"30px 20px", position:"relative", overflowX:"hidden" }}>
+            <div style={{minHeight:"100vh", padding:"0px 20px 30px", position:"relative", overflowX:"hidden" }}>
                 <div style={{textAlign:"left"}}>
                     <h3 className="title">Welcome</h3>
                 </div>
@@ -91,26 +91,79 @@ useEffect(() => {
                     </div>
                 </div>
                 <div className="light-header">
-                    <div style={{display:"flex"}}>
-                        <img src="/images/avatar.svg" style={{marginRight:"20px"}}/>
+                    <div style={{display:"flex",justifyContent:"space-between"}}>
                         <div style={{display:"block"}}>
-                            <h6>{fname}</h6>
-                            <p>{position}</p>
+                            <h6>Station</h6>
+                            <p>{station}</p>
+                        </div>
+                        <div style={{display:"block"}}>
+                            <h6>Region</h6>
+                            <p>{region}</p>
                         </div>
                     </div>
                 </div>
-                <div className="loginform">
-                    <h3>Login to Account</h3>
-                    <p>Enter your Username & Password</p>
-                    <div className="form-control">
-                        <input type="text" placeholder="Enter Username" value={username} onChange={(e)=>setUsername(e.target.value)} />
+                <div className="major-contents">
+                    <h5 className="title">Selling Price</h5>
+                    <Grid container spacing={2}>
+                        <Grid item md={6} sm={12} xs={12}>
+                            <div className="each-content">
+                                <h6>PMS</h6>
+                                <h3>165</h3>
+                            </div>
+                        </Grid>
+                        <Grid item md={6} sm={12} xs={12}>
+                            <div className="each-content">
+                                <h6>AGO</h6>
+                                <h3>340</h3>
+                            </div>
+                        </Grid>
+                        <Grid item md={6} sm={12} xs={12}>
+                            <div className="each-content">
+                                <h6>HHK</h6>
+                                <h3>0</h3>
+                            </div>
+                        </Grid>
+                        <Grid item md={6} sm={12} xs={12}>
+                            <div className="each-content">
+                                <h6>LPG 6KG</h6>
+                                <h3>4250</h3>
+                            </div>
+                        </Grid>
+                        <Grid item md={6} sm={12} xs={12}>
+                            <div className="each-content">
+                                <h6>LPG 12.5KG</h6>
+                                <h3>8500</h3>
+                            </div>
+                        </Grid>
+                        <Grid item md={6} sm={12} xs={12}>
+                            <div className="each-content">
+                                <h6>LPG 50KG</h6>
+                                <h3>16000</h3>
+                            </div>
+                        </Grid>
+                        <Grid item md={6} sm={12} xs={12}>
+                            <div className="each-content">
+                                <h6>Pump Integrity</h6>
+                                <h3>0.7</h3>
+                            </div>
+                        </Grid>
+                    </Grid>
+                </div>
+            </div>
+            <div style={{position:"fixed",bottom:"0px",backgroundColor:"#fff",width:"100%",}}>
+                <div style={{display:"flex",justifyContent:"space-between",boxShadow: "0px 8px 40px rgba(0, 0, 0, 0.05)",borderRadius: "5px",padding:"16px 45px 13px"}}>
+                    <div onClick={()=>setNavValue(0)} className="bottomnav">
+                        <img src="/images/startofday.svg" />
+                        <p>Start of Day</p>
                     </div>
-                    <div className="form-control">
-                        <input type={passType} placeholder="Enter Password" value={password} onChange={(e)=>setPassword(e.target.value)} />
-                        <div className="seepass"><span onClick={handleVisibility} className="material-icons grey">{passVisible}</span></div>
+                    <div onClick={()=>setNavValue(1)} className="bottomnav">
+                        <img src="/images/startofday.svg" />
+                        <p>End of Day</p>
                     </div>
-                    <p onClick={()=>window.location="/forgot-password"} className="forgotpass">I forgot my password</p>
-                    <button className="gradient-btn" onClick={handleLogin}>Login Here</button>
+                    <div onClick={()=>setNavValue(2)} className="bottomnav">
+                        <img src="/images/startofday.svg" />
+                        <p>More Actions</p>
+                    </div>
                 </div>
             </div>
             <Snackbar open={openAlert} autoHideDuration={6000} onClose={handleAlert}>
