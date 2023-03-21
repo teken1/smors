@@ -15,7 +15,11 @@ export const Welcome = () => {
     const [password, setPassword] = useState("");
     const [alertMessage, setAlertMessage] = useState("");
     const [alertSeverity, setAlertSeverity] = useState("");
-    const [fname, setFname] = useState("Daniel");
+    const [fname, setFname] = useState("Oluwatobi");
+    const [lname, setLname] = useState("Olowu");
+    const [position, setPosition] = useState("Operating Manager");
+    const [station, setStation] = useState("Sangotedo");
+    const [region, setRegion] = useState("Island");
     const [capitalUSD, setCapitalUSD] = useState("0.00");
     const [capitalBTC, setCapitalBTC] = useState("0.00000000");
     const [profitUSD, setProfitUSD] = useState("0.00");
@@ -73,15 +77,27 @@ useEffect(() => {
     return (
         <main style={{backgroundColor:"#fff",
         }}>
-            <div style={{minHeight:"100vh", padding:"20px 50px", position:"relative", overflowX:"hidden" }}>
-                <div className="logo-bg">
-                </div>
+            <div style={{minHeight:"100vh", padding:"30px 20px", position:"relative", overflowX:"hidden" }}>
                 <div style={{textAlign:"left"}}>
-                    <img src="/images/logolight.png"/>
+                    <h3 className="title">Welcome</h3>
                 </div>
-                <div className="white-ellipse">
+                <div className="dark-header">
+                    <div style={{display:"flex"}}>
+                        <img src="/images/avatar.svg" style={{marginRight:"20px"}}/>
+                        <div style={{display:"block"}}>
+                            <h4>{fname}</h4>
+                            <p>{position}</p>
+                        </div>
+                    </div>
                 </div>
-                <div className="yellow-ellipse">
+                <div className="light-header">
+                    <div style={{display:"flex"}}>
+                        <img src="/images/avatar.svg" style={{marginRight:"20px"}}/>
+                        <div style={{display:"block"}}>
+                            <h6>{fname}</h6>
+                            <p>{position}</p>
+                        </div>
+                    </div>
                 </div>
                 <div className="loginform">
                     <h3>Login to Account</h3>
