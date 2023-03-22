@@ -151,7 +151,7 @@ useEffect(() => {
                 </div>
             </div>
             <div style={{position:"fixed",bottom:"0px",backgroundColor:"#fff",width:"100%",}}>
-                <div style={{display:"flex",justifyContent:"space-between",boxShadow: "0px 8px 40px rgba(0, 0, 0, 0.05)",borderRadius: "5px",padding:"16px 45px 13px"}}>
+                <div className="appbar-wrap">
                     <div onClick={()=>setNavValue(0)} className="bottomnav">
                         <img src="/images/startofday.svg" />
                         <p>Start of Day</p>
